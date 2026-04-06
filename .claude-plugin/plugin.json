@@ -29,5 +29,6 @@
   "hooks": [
     { "event": "PreToolUse", "file": "hooks/pre-release-check.md" }
   ],
+  "privacy_policy": "https://github.com/SUDARSHANCHAUDHARI/playcraft-claude-plugin-privacy-policy",
   "keywords": ["android", "google-play", "play-store", "aso", "publishing", "mobile"]
 }
