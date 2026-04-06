@@ -68,13 +68,6 @@
     { "name": "policy-checker", "file": "agents/policy-checker.md" },
     { "name": "locale-agent",   "file": "agents/locale-agent.md" }
   ],
-  "skills": [
-    "skills/play-policy-2026.md",
-    "skills/closed-testing.md",
-    "skills/financial-declarations.md",
-    "skills/ai-content-declarations.md",
-    "skills/developer-identity-th.md"
-  ],
   "hooks": [
     { "event": "PreToolUse", "file": "hooks/pre-release-check.md" }
   ]

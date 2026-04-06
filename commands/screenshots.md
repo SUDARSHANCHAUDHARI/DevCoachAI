@@ -5,11 +5,11 @@ argument-hint: (no arguments needed — you will be prompted)
 
 Write alt text, captions, and feature graphic descriptions for Play Store screenshots.
 
-## Config check
+## Developer config
 
-Before doing anything, read .claude-plugin-config.json from the current project directory.
-- If not found: stop and say "Run /playcraft:setup first to configure your developer details."
-- If found: load silently and proceed.
+Use these values from plugin config throughout — never ask the user for them:
+- Developer name: ${user_config.developer_name}
+- Company: ${user_config.company}
 
 ## Steps
 
