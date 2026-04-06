@@ -5,7 +5,7 @@ Automate your Play Store publishing workflow. Built by an Android developer who 
 ## Install
 
 ```bash
-/plugin marketplace add https://github.com/SUDARSHANCHAUDHARI/PlayCraft
+/plugin install playcraft
 ```
 
 ## First-time setup
