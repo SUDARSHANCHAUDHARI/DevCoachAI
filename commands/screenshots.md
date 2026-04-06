@@ -1,3 +1,8 @@
+---
+description: Write captions (~30 chars), alt text, and slot recommendations for up to 8 Play Store screenshots. Optionally describes the feature graphic.
+argument-hint: (no arguments needed — you will be prompted)
+---
+
 Write alt text, captions, and feature graphic descriptions for Play Store screenshots.
 
 ## Config check

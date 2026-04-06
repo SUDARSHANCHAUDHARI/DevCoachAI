@@ -1,3 +1,8 @@
+---
+description: Write Play Store release notes (what's new) for an app update. Under 500 characters, user-friendly language, with optional localization.
+argument-hint: (no arguments needed — you will be prompted)
+---
+
 Write Play Store release notes (what's new) for an app update.
 
 ## Config check

@@ -1,3 +1,8 @@
+---
+description: One-time setup — saves your developer details to .claude-plugin-config.json. Run this first before any other PlayCraft command.
+argument-hint: (no arguments needed)
+---
+
 Run one-time setup for PlayCraft. Saves your developer config to .claude-plugin-config.json so all other commands work without asking for your details every time.
 
 ## Steps

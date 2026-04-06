@@ -1,3 +1,8 @@
+---
+description: Generate a complete Play Store listing — title, short description, and full description with character limit checks and optional policy review.
+argument-hint: (no arguments needed — you will be prompted)
+---
+
 Generate a complete Google Play Store listing for an Android app.
 
 ## Config check

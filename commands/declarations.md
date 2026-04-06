@@ -1,3 +1,8 @@
+---
+description: Generate all required Play Console policy declarations — data safety, financial features, AI content, families, and identity verification checklist.
+argument-hint: (no arguments needed — you will be prompted)
+---
+
 Generate all required Google Play policy declarations for an app submission.
 
 ## Config check

@@ -1,3 +1,8 @@
+---
+description: Run a full ASO audit — scores your title, short desc, and full description out of 30, with keyword recommendations and rewrite offers.
+argument-hint: (no arguments needed — you will be prompted)
+---
+
 Run a full ASO (App Store Optimization) audit on a Play Store listing.
 
 ## Config check
