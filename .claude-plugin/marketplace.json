@@ -1,0 +1,8 @@
+{
+  "name": "playcraft",
+  "display_name": "PlayCraft",
+  "description": "Automate Play Store submissions — listings, ASO, release notes, and policy compliance. Built by an Android developer who has shipped 20+ apps.",
+  "category": "mobile-development",
+  "tags": ["android", "google-play", "aso", "publishing"],
+  "install_command": "/plugin install playcraft@SUDARSHANCHAUDHARI-PlayCraft"
+}
