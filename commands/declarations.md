@@ -5,11 +5,11 @@ argument-hint: (no arguments needed — you will be prompted)
 
 Generate all required Google Play policy declarations for an app submission.
 
-## Config check
+## Developer config
 
-Before doing anything, read .claude-plugin-config.json from the current project directory.
-- If not found: stop and say "Run /playcraft:setup first to configure your developer details."
-- If found: load silently and proceed. Use {config.developer.country} and {config.developer.email} where relevant — never hardcode.
+Use these values from plugin config — never ask the user for them:
+- Country: ${user_config.country}
+- Email: ${user_config.email}
 
 ## Steps
 
@@ -37,7 +37,7 @@ Before doing anything, read .claude-plugin-config.json from the current project 
    **Financial features declaration** (only if answered yes above)
    - Navigation: App Dashboard → Policy → App content → Financial features
    - Select all applicable types: banking/payment, investment, insurance, cryptocurrency, lending/credit
-   - Upload license if required in {config.developer.country}, or select "No financial license required"
+   - Upload license if required in ${user_config.country}, or select "No financial license required"
    - Add in-app disclaimer if no license: "This app does not provide financial advice. Consult a qualified financial advisor."
    - For IAP/subscriptions: App Dashboard → Monetization setup → Products
      - Subscription terms must be visible before user subscribes
@@ -54,7 +54,7 @@ Before doing anything, read .claude-plugin-config.json from the current project 
    - Select "Designed for children" or "Mixed audience"
    - Additional requirements: no interest-based advertising, compliant third-party SDKs only
 
-   **Developer identity verification** (applies to {config.developer.country} accounts)
+   **Developer identity verification** (applies to ${user_config.country} accounts)
    - Navigation: Play Console → Settings → Developer account → Identity verification
    - Individual: government-issued ID matching Google account name
    - Organization: D-U-N-S number + business registration document

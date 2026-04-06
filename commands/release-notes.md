@@ -5,18 +5,18 @@ argument-hint: (no arguments needed — you will be prompted)
 
 Write Play Store release notes (what's new) for an app update.
 
-## Config check
+## Developer config
 
-Before doing anything, read .claude-plugin-config.json from the current project directory.
-- If not found: stop and say "Run /playcraft:setup first to configure your developer details."
-- If found: load silently and proceed. Use {config.play_store.default_locale} and {config.play_store.target_locales} to determine locales — never hardcode.
+Use these values from plugin config — never ask the user for them:
+- Default locale: ${user_config.default_locale}
+- Target locales: ${user_config.target_locales}
 
 ## Steps
 
 1. Ask for:
    - List of changes in this version (paste git log output, a changelog, or describe in plain text)
    - Version number (e.g. 2.1.0)
-   - Target locale(s) — defaults to {config.play_store.default_locale}; ask if user wants additional locales
+   - Target locale(s) — defaults to ${user_config.default_locale}; ask if user wants additional locales
 
 2. Write release notes that:
    - Are under 500 characters (Play Store limit — count and confirm before outputting)

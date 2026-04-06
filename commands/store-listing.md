@@ -5,11 +5,13 @@ argument-hint: (no arguments needed — you will be prompted)
 
 Generate a complete Google Play Store listing for an Android app.
 
-## Config check
+## Developer config
 
-Before doing anything, read .claude-plugin-config.json from the current project directory.
-- If not found: stop and say "Run /playcraft:setup first to configure your developer details."
-- If found: load silently and proceed. Use {config.developer.name}, {config.developer.company}, {config.developer.email}, {config.play_store.default_locale}, etc. throughout — never hardcode these values.
+Use these values from plugin config throughout — never ask the user for them:
+- Developer name: ${user_config.developer_name}
+- Company: ${user_config.company}
+- Default locale: ${user_config.default_locale}
+- Target locales: ${user_config.target_locales}
 
 ## Steps
 
@@ -70,5 +72,5 @@ Full desc: X/4000
 - Avoid ALL CAPS except for acronyms and section headers
 - Write in active voice
 - Never use: "easy", "simple", "best", "amazing", "powerful" — show the value, don't label it
-- Default to {config.play_store.default_locale} for the listing language
-- If {config.play_store.target_locales} includes locales other than en-US, offer to generate localized versions using the locale-agent after the English listing is approved
+- Default to ${user_config.default_locale} for the listing language
+- If ${user_config.target_locales} is set, offer to generate localized versions using locale-agent after the English listing is approved

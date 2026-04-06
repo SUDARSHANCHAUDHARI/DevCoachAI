@@ -1,64 +1,30 @@
 ---
-description: One-time setup — saves your developer details to .claude-plugin-config.json. Run this first before any other PlayCraft command.
+description: Show your current PlayCraft developer config and how to update it.
 argument-hint: (no arguments needed)
 ---
 
-Run one-time setup for PlayCraft. Saves your developer config to .claude-plugin-config.json so all other commands work without asking for your details every time.
+Show the current PlayCraft developer configuration.
 
 ## Steps
 
-1. Check if .claude-plugin-config.json already exists in the current project directory:
-   - If yes: read the file, display current config, ask "Update config? (y/n)"
-   - If no: proceed with fresh setup
-
-2. Ask the user these questions one by one:
-
-   **Developer info**
-   - Your full name or developer display name: (e.g. Your Name)
-   - Company / developer label shown on Play Store: (e.g. YourCompany)
-   - Contact email for Play Console and privacy policy: (e.g. you@example.com)
-   - GitHub username: (e.g. your-github-username)
-   - Country: (e.g. Your Country)
-
-   **Play Store config**
-   - Default locale for listings: (default: en-US — press Enter to accept)
-   - Other locales to support: (comma separated e.g. fr-FR, de-DE — press Enter to skip)
-
-3. Write the following to .claude-plugin-config.json (substitute answers from above):
-
-```json
-{
-  "developer": {
-    "name": "[answer]",
-    "company": "[answer]",
-    "email": "[answer]",
-    "github_username": "[answer]",
-    "country": "[answer]"
-  },
-  "play_store": {
-    "default_locale": "[answer or en-US]",
-    "target_locales": ["[answer split by comma, trimmed]"]
-  },
-  "plugin_version": "1.0.0",
-  "configured_at": "[today's date in YYYY-MM-DD format]"
-}
-```
-
-4. Add .claude-plugin-config.json to .gitignore:
-   - If .gitignore does not exist, create it with just the entry `.claude-plugin-config.json`
-   - If .gitignore exists, check if the entry is already present — add it only if missing
-
-5. Confirm setup is complete by printing:
+1. Display the current config values from plugin userConfig:
 
 ```
-PLAYCRAFT SETUP COMPLETE
-─────────────────────────
-Developer:  [name] ([company])
-Email:      [email]
-GitHub:     [github_username]
-Country:    [country]
-Locale:     [default_locale]
-
-All PlayCraft commands will now use these settings.
-Run /playcraft:setup again anytime to update.
+PLAYCRAFT CONFIGURATION
+────────────────────────
+Developer:      ${user_config.developer_name}
+Company:        ${user_config.company}
+Email:          ${user_config.email}
+GitHub:         ${user_config.github_username}
+Country:        ${user_config.country}
+Default locale: ${user_config.default_locale}
+Other locales:  ${user_config.target_locales}
 ```
+
+2. Explain how to update:
+   - Claude Code → Settings → Plugins → PlayCraft → Configure
+   - Update any field and save — changes apply immediately to all commands
+
+## Note
+
+Config is stored globally by Claude Code — not in a local file. You set it once at install time and it works across all your projects automatically.
