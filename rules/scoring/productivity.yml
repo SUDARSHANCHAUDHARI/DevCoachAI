@@ -1,0 +1,9 @@
+id: productivity
+category: scoring
+title: Productivity score
+description: Scores whether AI sessions produce clear outputs with low retry waste.
+inputs:
+  - completed_sessions
+  - retry_loops
+  - verification_present
+  - actionable_outputs

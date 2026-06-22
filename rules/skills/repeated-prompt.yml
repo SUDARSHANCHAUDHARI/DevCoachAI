@@ -1,0 +1,10 @@
+id: repeated-prompt
+category: skill-candidate
+severity: low
+title: Repeated prompt
+description: Detects prompts that appear often enough to become a reusable command, template, or skill.
+signals:
+  - prompt_similarity_cluster
+  - repeated_intent
+  - repeated_project_context
+recommendation: Convert the repeated request into a reusable prompt template or Codex skill.

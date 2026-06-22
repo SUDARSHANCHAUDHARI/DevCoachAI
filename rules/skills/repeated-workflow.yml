@@ -1,0 +1,10 @@
+id: repeated-workflow
+category: skill-candidate
+severity: low
+title: Repeated workflow
+description: Detects similar multi-step sessions that could become a workflow automation.
+signals:
+  - repeated_tool_sequence
+  - repeated_file_patterns
+  - repeated_outcome
+recommendation: Create a workflow checklist, script, or skill for this recurring task.

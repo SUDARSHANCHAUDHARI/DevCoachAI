@@ -1,0 +1,10 @@
+id: context-health
+category: scoring
+title: Context health score
+description: Scores whether sessions include enough repo, file, task, and verification context.
+inputs:
+  - workspace_detected
+  - file_references
+  - command_outputs
+  - instructions_present
+  - verification_present

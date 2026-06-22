@@ -1,0 +1,10 @@
+id: retry-loop
+category: anti-pattern
+severity: high
+title: Retry loop
+description: Detects repeated attempts to solve the same issue without adding new evidence or changing strategy.
+signals:
+  - repeated_error_terms
+  - repeated_prompt_similarity
+  - no_new_logs_or_tests
+recommendation: Stop and collect fresh evidence, logs, failing tests, or a minimal reproduction before continuing.

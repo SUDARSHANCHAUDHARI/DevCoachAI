@@ -1,0 +1,10 @@
+id: no-tests
+category: anti-pattern
+severity: medium
+title: No verification
+description: Detects implementation sessions that end without test, lint, build, or manual verification evidence.
+signals:
+  - code_change_detected
+  - no_test_command
+  - no_verification_summary
+recommendation: Run a focused verification command and record the result before considering the task done.

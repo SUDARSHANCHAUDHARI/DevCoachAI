@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+local.properties
+
+# Build output
+dist/
+build/
+out/
+.next/
+coverage/
+
+# Caches and local files
+.DS_Store
+.idea/
+.vscode/
+*.log
+.turbo/
+.cache/
+.pytest_cache/
+__pycache__/
+
+# Private AI/session data
+raw-logs/
+private-logs/
+transcripts/
+sessions/
+
+# Generated artifacts
+*.tsbuildinfo
+*.sqlite
+*.db

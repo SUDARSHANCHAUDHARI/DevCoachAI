@@ -1,0 +1,10 @@
+id: context-missing
+category: anti-pattern
+severity: medium
+title: Missing context
+description: Detects sessions where the assistant is asked to reason about code without repo, file, stack, or command output context.
+signals:
+  - no_workspace
+  - no_file_paths
+  - no_command_output
+recommendation: Include repo path, relevant files, command output, and constraints before requesting a solution.

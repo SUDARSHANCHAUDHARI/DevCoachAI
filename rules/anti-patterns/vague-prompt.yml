@@ -1,0 +1,10 @@
+id: vague-prompt
+category: anti-pattern
+severity: medium
+title: Vague prompt
+description: Detects prompts that ask for help without enough task, file, error, or expected-output context.
+signals:
+  - short_prompt
+  - missing_file_reference
+  - missing_expected_outcome
+recommendation: Add task goal, relevant files, current error, and desired output before asking the assistant.
