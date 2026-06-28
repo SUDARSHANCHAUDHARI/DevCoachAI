@@ -40,3 +40,4 @@ sessions/
 *.tsbuildinfo
 *.sqlite
 *.db
+pnpm-lock.yaml
