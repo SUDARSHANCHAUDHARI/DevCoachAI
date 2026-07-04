@@ -41,3 +41,9 @@ sessions/
 *.sqlite
 *.db
 pnpm-lock.yaml
+
+# Internal docs — kept local, not published
+AGENTS.md
+docs/ROADMAP.md
+docs/idea.md
+docs/MVP.md
